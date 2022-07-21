@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Balls</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onkeyup="handleKey(event)" onload="initGame()">
+
+    <h1>MineSweeper</h1>
+    <img src="img/Mines1.jpeg" alt="Paris">
+    <h2>Lives: <span>3</span></h2>
+    <h3>Timer:
+        <span id="minutes"></span><span id="seconds"></span>
+
+    </h3>
+
+    <!-- <a href="#" onclick="clickHandler()">Some Link</a> -->
+
+    <table>
+        <tbody class="board"></tbody>
+    </table>
+    <script src="js/game.js"></script>
+
+    <script src="js/utils.js"></script>
+
+</body>
+
+</html>

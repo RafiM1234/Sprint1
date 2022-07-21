@@ -1,0 +1,61 @@
+body {
+    text-align: center;
+    background-color: rgb(185, 232, 181)
+    /* text-align: center */
+  
+} 
+.click {
+    width:50px; 
+    height:50px;
+    border-radius: 4px;
+    font-size:large;
+    text-align: center;
+    background-color: gray
+    
+}
+.flag {
+    width:50px; 
+     height:50px;
+     text-align: center;
+   font-size: x-large;
+    background-color: rgb(240, 196, 130)
+
+    /* style.fontsize:40px. */
+} 
+.floor {
+    width:50px; 
+     height:50px;
+     border-radius: 4px;
+     font-size: x-large;
+     text-align: center;
+     background-color: rgb(240, 196, 130)
+     
+    /* style.fontsize:40px. */
+} 
+img {
+    im center;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 5px;
+    width: 300px;
+  }
+
+h1{
+    text-align: center;
+    width:500px;
+    background-color: rgb(130, 224, 240)
+
+  }
+
+  h2{
+    text-align: center;
+    width:500px;
+    background-color: rgb(130, 224, 240)
+
+  }
+  h3{
+    text-align: center;
+    width:500px;
+    background-color: rgb(130, 224, 240)
+
+  }
