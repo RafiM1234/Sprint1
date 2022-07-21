@@ -1,5 +1,5 @@
 body {
-    text-align: center;
+    /* text-align: center; */
     background-color: rgb(185, 232, 181)
     /* text-align: center */
   
@@ -59,3 +59,12 @@ h1{
     background-color: rgb(130, 224, 240)
 
   }
+  button{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin: 5px;
+    padding: 10px;
+    font-size: large;
+    text-align: center;
+
+}
