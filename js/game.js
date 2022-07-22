@@ -81,6 +81,8 @@ function initGame(gameSize) {
     gGame.markedCount = 0
     gGame.shownCount = 0
     gLifeCount = 3
+    elPopup = document.querySelector('.smile')
+
     document.querySelector('h2 span').innerText = gLifeCount
     gLevel.SIZE = gameSize
     SIZE = gameSize
