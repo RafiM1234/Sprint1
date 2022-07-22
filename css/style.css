@@ -1,8 +1,5 @@
 body {
-    /* text-align: center; */
-    background-color: rgb(185, 232, 181)
-    /* text-align: center */
-  
+    background-color: rgb(197, 213, 182)
 } 
 .click {
     width:50px; 
@@ -10,8 +7,8 @@ body {
     border-radius: 4px;
     font-size:large;
     text-align: center;
+    border: 2px solid rgb(63, 60, 56);
     background-color: gray
-    
 }
 .flag {
     width:50px; 
@@ -19,8 +16,6 @@ body {
      text-align: center;
    font-size: x-large;
     background-color: rgb(240, 196, 130)
-
-    /* style.fontsize:40px. */
 } 
 .floor {
     width:50px; 
@@ -28,43 +23,78 @@ body {
      border-radius: 4px;
      font-size: x-large;
      text-align: center;
+     border: 2px solid rgb(222, 156, 59);
      background-color: rgb(240, 196, 130)
-     
-    /* style.fontsize:40px. */
 } 
 img {
-    im center;
+      margin: auto;
+      width: 50%;
+      padding: 10px;
     border: 1px solid #ddd;
     border-radius: 20px;
     padding: 5px;
-    width: 300px;
-  }
-
+     width: 500px;
+    height: 150px
+}
 h1{
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+  border-radius: 50px;
+  font-size: 75px;
+  text-align: center;
+  width:500px;
+  background-color: rgb(52, 216, 52)
+}
+
+h2{
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+    border-radius: 20px;
     text-align: center;
     width:500px;
-    background-color: rgb(130, 224, 240)
-
-  }
-
-  h2{
-    text-align: center;
-    width:500px;
-    background-color: rgb(130, 224, 240)
-
+    background-color: rgb(52, 216, 52)
   }
   h3{
-    text-align: center;
-    width:500px;
-    background-color: rgb(130, 224, 240)
 
-  }
-  button{
-    margin-right: 20px;
-    margin-left: 20px;
-    margin: 5px;
-    padding: 10px;
-    font-size: large;
-    text-align: center;
+      width: 50%;
+      border: 3px solid green;
+      padding: 10px;
 
+     border-radius: 20px;
+    text-align: center;
+    width:500px; 
+    background-color: rgb(4, 144, 4)
+}
+button{
+    margin-right: 10px;
+    margin-left: 10px;
+    margin: 10px; 
+    padding: 20px;
+    font-size: x-large;
+    text-align: center; 
+    border-radius: 20px;
+    border: 2px solid rgb(63, 60, 56);
+    background-color: rgb(192, 183, 238)
+}
+.popup {
+  border-radius: 50px;
+  background-color: rgb(229, 255, 0);
+  padding: 20px;
+  position: absolute;
+  right: 450px;
+  top: 30px;
+}
+
+.popup1 {
+  border-radius: 50px;
+  background-color: rgb(255, 21, 0);
+  padding: 20px;
+  position: absolute;
+  right: 450px;
+  top: 30px;
+}
+.hide {
+  display: none;
 }
