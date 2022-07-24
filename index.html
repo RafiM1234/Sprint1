@@ -13,31 +13,39 @@
     <img src="img/Mines1.jpeg" alt="Paris">
 
     <h2>Lives: <span>3</span></h2>
-    <h3>Timer:
-        <span id="minutes"></span><span id="seconds"></span>
+    <h3 class="timer">Game Time:
+        <!-- <span id="minutes"></span><span id="seconds"></span> -->
+        <!-- <button class="timer">Game Time:</button> -->
     </h3>
-    <div>
-        <h2>Choose Your Level</h2>
+    <h2>Choose Your Level</h2>
+
+
+
+
+    <div class="container">
+        <button class="smile">😃</button>
         <button class="easy" onclick="initGame(4)">Beginner(4x4)</button>
         <button class="hard" onclick="initGame(8)">Medium(8x8)</button>
         <button class="extreme" onclick="initGame(12)">Expert(12x12)</button>
-        <button class="smile">😃</button>
 
     </div>
-
-    <!-- <a href="#" onclick="clickHandler()">Some Link</a> -->
-    <div class="popup hide">
-        <!-- <div hidden class="popup"> -->
-        <h1>You Won <span>!🤴!</span></h1>
-    </div>
+    <div class="countdown"></div>
+    <table class="table">
+        <tbody class="board"></tbody>
+    </table>
     <div class="popup1 hide">
+        <!-- <div hidden class="popup"> -->
+        <h1>You Won <span>😃</span></h1>
+    </div>
+    <div class="popup2 hide">
         <!-- <div hidden class="popup"> -->
         <h1>GAME OVER <span>☹️</span></h1>
     </div>
-
     <table>
         <tbody class="board"></tbody>
     </table>
+
+
     <script src="js/game.js"></script>
 
     <script src="js/utils.js"></script>

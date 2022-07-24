@@ -1,11 +1,8 @@
 'use strict'
 
-
 const MINE = '💣'
 const EMPTY = ' '
-var SIZE = 4
 const FLAG = '🚩'
-
 
 var BOMB_IMG = '<img src="img/gamer.png" />'
 var gLevel = { SIZE: SIZE, MINES: 2 }
@@ -17,41 +14,48 @@ var gFirstCellX
 var gFirstCellY
 var gLifeCount = 3
 var gFirstClick = false
+var SIZE = 4
+var exeptedValue
+var timer = 0.00
+var timeResolution = 1
+var gameInterval
 
+function renderTimer() {
+    if (gFirstClick) {
+        timer += timeResolution
+    }
+    // timer += timeResolution
+    //   console.log('Timer', timer)
+    var elTimer = document.querySelector('.timer')
+    elTimer.innerHTML = `Game Time: ${parseFloat(timer).toFixed(2)}sec`
 
-
-
-//Remove Default Right Click menu
-window.addEventListener('contextmenu', (event) => {
-    event.preventDefault()
-})
-
+}
 function checkVictory() {
     var victurySize = SIZE * SIZE
     if (victurySize === gGame.markedCount + gGame.shownCount) {
-        console.log('Victory:!!!!!')
         gGame.markedCount = 0
         gGame.shownCount = 0
         gGame.isOn = false
-        var elPopup = document.querySelector('.popup')
+        var elPopup = document.querySelector('.popup1')
         elPopup.classList.remove('hide')
         elPopup = document.querySelector('.smile')
         elPopup.innerText = '😎'
-        //console.log('elPopup.classList:', elPopup.classList)
     }
 
 }
-function timer() {
-    var sec = 0
-    function pad(val) { return val > 9 ? val : "0" + val; }
-    setInterval(function () {
-        document.getElementById("seconds").innerHTML = ':' + pad(++sec % 60);
-        document.getElementById("minutes").innerHTML = pad(parseInt(sec / 60, 10));
-    }, 1000);
-}
+
+// function timer() {
+//     var sec = 0
+//     function pad(val) { return val > 9 ? val : "0" + val; }
+//     setInterval(function () {
+//         document.getElementById("seconds").innerHTML = ':' + pad(++sec % 60);
+//         document.getElementById("minutes").innerHTML = pad(parseInt(sec / 60, 10));
+//     }, 1000);
+// }
+
 function gameOver() {
     console.log('GameOver:!!!')
-    var elPopup = document.querySelector('.popup1')
+    var elPopup = document.querySelector('.popup2')
     elPopup.classList.remove('hide')
     elPopup = document.querySelector('.smile')
     elPopup.innerText = '🤯'
@@ -69,14 +73,16 @@ function gameOver() {
 }
 
 function initGame(gameSize) {
-    var elPopup = document.querySelector('.popup')
+    exeptedValue = 1
+    gFirstClick = false
+    timer = 0.00
+
+    var elPopup = document.querySelector('.popup1')
     elPopup.classList.add('hide')
-    elPopup = document.querySelector('.popup1')
+    elPopup = document.querySelector('.popup2')
     elPopup.classList.add('hide')
     elPopup = document.querySelector('.smile')
     elPopup.innerText = '😃'
-
-    // if (gGame.isOn === true) return
     gFirstCell = false
     gGame.markedCount = 0
     gGame.shownCount = 0
@@ -202,7 +208,8 @@ function setMinesNegsCount(board) {
 function rightClicked(elCell, i, j) {
     if (gBoard[i][j].isShown) return
     if (!gFirstClick) {
-        timer()
+        // timer()
+        gameInterval = setInterval(renderTimer, 200)
         gFirstClick = true
         checkVictory()
     }
@@ -243,7 +250,8 @@ function leftClicked(elCell, i, j) {
         }
     }
     if (!gFirstClick) {
-        timer()
+        gameInterval = setInterval(renderTimer, 200)
+        // timer()
         gFirstClick = true
     }
     renderBoard()
@@ -306,7 +314,17 @@ function renderBoard() {
 
     }
 
+    //Remove Default Right Click menu
+
 }
+
+
+
+//Remove Default Right Click menu
+window.addEventListener('contextmenu', (event) => {
+    event.preventDefault()
+})
+
 
 
 
